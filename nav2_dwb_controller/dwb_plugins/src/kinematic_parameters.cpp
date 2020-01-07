@@ -127,6 +127,8 @@ KinematicParameters::on_parameter_event_callback(
     const auto & name = changed_parameter.name;
     const auto & value = changed_parameter.value;
 
+    std::cerr << "Paramenter changed: " << name << " = " << value.double_value << std::endl;
+    
     if (type == ParameterType::PARAMETER_DOUBLE) {
       if (name == "min_vel_x") {
         min_vel_x_ = value.double_value;
