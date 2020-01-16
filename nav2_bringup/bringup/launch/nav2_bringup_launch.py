@@ -85,7 +85,7 @@ def generate_launch_description():
                           'autostart': autostart,
                           'params_file': params_file,
                           'use_lifecycle_mgr': 'false',
-                          'use_remappings': use_remappings}.items())
+                          'use_remappings': 'true'}.items())
 
     start_navigation_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(launch_dir, 'nav2_navigation_launch.py')),
@@ -95,7 +95,7 @@ def generate_launch_description():
                           'params_file': params_file,
                           'bt_xml_file': bt_xml_file,
                           'use_lifecycle_mgr': 'false',
-                          'use_remappings': use_remappings,
+                          'use_remappings': 'true',
                           'map_subscribe_transient_local': 'true'}.items())
 
     start_lifecycle_manager_cmd = Node(
