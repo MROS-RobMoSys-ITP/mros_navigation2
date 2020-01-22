@@ -72,7 +72,7 @@ def generate_launch_description():
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='true',
+        default_value='false',
         description='Use simulation (Gazebo) clock if true')
 
     declare_params_file_cmd = DeclareLaunchArgument(
@@ -102,7 +102,7 @@ def generate_launch_description():
 
     declare_use_simulator_cmd = DeclareLaunchArgument(
         'use_simulator',
-        default_value='True',
+        default_value='False',
         description='Whether to start the simulator')
 
     declare_use_robot_state_pub_cmd = DeclareLaunchArgument(
@@ -198,7 +198,7 @@ def generate_launch_description():
     ld.add_action(declare_world_cmd)
 
     # Add any conditioned actions
-    ld.add_action(start_gazebo_cmd)
+    #ld.add_action(start_gazebo_cmd)
     ld.add_action(start_rviz_cmd)
 
     # Add other nodes and processes we need
