@@ -10,7 +10,7 @@ Also, the `nav2_bringup pkg`_ contains a `nav2_params file`_ with the default va
 
 .. rst-class:: content-collapse
 
-ACML
+AMCL
 ====
 
 .. code-block:: yaml
@@ -137,7 +137,6 @@ Hosts the `DWB` controller.
         sim_time: 1.7
         trajectory_generator_name: dwb_plugins::StandardTrajectoryGenerator
         transform_tolerance: 0.2
-        use_dwa: false
         use_sim_time: true
         vx_samples: 20
         vy_samples: 5
