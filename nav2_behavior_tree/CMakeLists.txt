@@ -98,6 +98,9 @@ list(APPEND plugin_libs nav2_pipeline_sequence_bt_node)
 add_library(nav2_round_robin_node_bt_node SHARED plugins/control/round_robin_node.cpp)
 list(APPEND plugin_libs nav2_round_robin_node_bt_node)
 
+add_library(nav2_obstacle_detected_action_bt_node SHARED plugins/action/obstacle_action.cpp)
+list(APPEND plugin_libs nav2_obstacle_detected_action_bt_node)
+
 add_library(nav2_battery_warning_action_bt_node SHARED plugins/action/battery_warning.cpp)
 list(APPEND plugin_libs nav2_battery_warning_action_bt_node)
 
