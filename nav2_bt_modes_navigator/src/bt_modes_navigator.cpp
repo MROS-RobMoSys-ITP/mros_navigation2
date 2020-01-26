@@ -318,7 +318,13 @@ BtNavigator::on_parameter_event_callback(
     if (type == ParameterType::PARAMETER_STRING) {
       if (name == "bt_xml_filename") {
         new_behavior_tree_ = true;
-        bt_xml_filename_ = value.string_value;
+        
+        std::string fullpath = bt_xml_filename_;
+        int beginIdx = fullpath.rfind('/');
+        std::string filename = fullpath.substr(beginIdx + 1);
+        fullpath.erase(fullpath.begin() + beginIdx + 1, fullpath.end());
+        
+        bt_xml_filename_ = fullpath + value.string_value;
       }
     }
   }
