@@ -186,6 +186,7 @@ def generate_launch_description():
                           'bt_xml_file': bt_xml_file,
                           'autostart': autostart}.items())
 
+    # TODO: How to launch the mode-manager with the argument in the launch?
     # mode_manager_cmd = Node(
     #     package='system_modes',
     #     node_executable='mode-manager',
@@ -226,6 +227,5 @@ def generate_launch_description():
 
 
     # Add system-modes manager
-    # TODO
     # ld.add_action(mode_manager_cmd)
     return ld
