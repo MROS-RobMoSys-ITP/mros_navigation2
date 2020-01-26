@@ -9,6 +9,7 @@
         <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"/>
       </RateController>
         <FollowPath path="{path}"  controller_id="FollowPath"/>
+        <ObstacleAction path="{path}"  controller_id="ObstacleAction"/>
     </PipelineSequence>
   </BehaviorTree>
 </root>
