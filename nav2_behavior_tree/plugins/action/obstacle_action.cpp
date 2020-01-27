@@ -59,7 +59,7 @@ public:
   BT::NodeStatus tick() override
   {     
     RCLCPP_WARN(node_->get_logger(), "Obstacle detected, Can you help me and move it?");
-    return BT::NodeStatus::SUCCESS;
+    return BT::NodeStatus::FAILURE;
   }
 
   static BT::PortsList providedBasicPorts(BT::PortsList addition)
