@@ -19,9 +19,9 @@ navigation2:
       BATTERY_CONTINGENCY:
         controller_server: active.SLOW
         bt_navigator: active.BATTERY_WARNING
-      OBSTACLE:
+      OBSTRUCTED:
         controller_server: active.STOP
-        bt_navigator: active.OBSTACLE
+        bt_navigator: active.OBSTRUCTED
 
 bt_navigator:
   ros__parameters:
@@ -39,7 +39,7 @@ bt_navigator:
       BATTERY_WARNING:
         ros__parameters:
           bt_xml_filename: "navigate_w_replanning_and_battery_warning.xml"
-      OBSTACLE:
+      OBSTRUCTED:
         ros__parameters:
           bt_xml_filename: "navigate_w_replanning_and_obstacle_detected.xml"
 
