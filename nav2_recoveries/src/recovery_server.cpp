@@ -84,7 +84,7 @@ RecoveryServer::on_configure(const rclcpp_lifecycle::State & /*state*/)
   get_parameter("recovery_plugins", recovery_ids_);
   if (recovery_ids_ == default_ids_) {
     for (size_t i = 0; i < default_ids_.size(); ++i) {
-      if (has_parameter(default_ids_[i] + ".plugin"))
+      if (!has_parameter(default_ids_[i] + ".plugin"))
         declare_parameter(default_ids_[i] + ".plugin", default_types_[i]);
     }
   }
